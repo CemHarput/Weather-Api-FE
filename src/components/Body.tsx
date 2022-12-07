@@ -1,12 +1,15 @@
+import { Carousel } from "./Carousel";
+import { Product } from "./Product";
+
 export const Body = () => {
   return (
-    <div className="z-0 flex flex-col w-full">
-      <div className="z-0 grid h-20 card bg-base-300 rounded-box place-items-center">
-        content1
+    <div className=" flex flex-col w-full">
+      <div className=" grid h-100 card bg-base-300 rounded-box place-items-center">
+        <Carousel></Carousel>
       </div>
       <div className="divider"></div>
-      <div className="grid h-20 card bg-base-300 rounded-box place-items-center">
-        content2
+      <div className="grid h-70 card bg-base-300 rounded-box place-items-center">
+        <Product></Product>
       </div>
       <div className="divider"></div>
       <div className="grid h-20 card bg-base-300 rounded-box place-items-center">
