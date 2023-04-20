@@ -8,7 +8,7 @@ export const Context = () => {
   return (
     <React.Fragment>
       <Header></Header>
-      <Body></Body>
+      <Body name={"testProp"}></Body>
       <Footer></Footer>
       <LoginModal></LoginModal>
     </React.Fragment>

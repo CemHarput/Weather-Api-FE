@@ -1,11 +1,15 @@
-import { Carousel } from "./Carousel";
 import { Product } from "./Product";
+import { WeatherTable } from "./WeatherTable";
 
-export const Body = () => {
+type NameProps = {
+  name: string;
+};
+
+export const Body = (props: NameProps) => {
   return (
     <div className=" flex flex-col w-full">
       <div className=" grid h-100 card bg-base-300 rounded-box place-items-center">
-        <Carousel></Carousel>
+        <WeatherTable></WeatherTable>
       </div>
       <div className="divider"></div>
       <div className="grid h-70 card bg-base-300 rounded-box place-items-center">
@@ -13,7 +17,7 @@ export const Body = () => {
       </div>
       <div className="divider"></div>
       <div className="grid h-20 card bg-base-300 rounded-box place-items-center">
-        content3
+        {props.name}
       </div>
       <div className="divider"></div>
       <div className="grid h-20 card bg-base-300 rounded-box place-items-center">

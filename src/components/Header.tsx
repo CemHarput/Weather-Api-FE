@@ -1,9 +1,14 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faUserGroup } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 
 const userIcon = <FontAwesomeIcon icon={faUser} size="lg" />;
 
 export const Header = () => {
+  const [firstName, setCityName] = useState("");
+  const handleSubmit = (event: { preventDefault: () => void }) => {
+    event.preventDefault();
+  };
   return (
     <div className="navbar bg-base-100 drop-shadow-md hover:drop-shadow-xl">
       <div className="navbar-start"></div>
@@ -11,6 +16,16 @@ export const Header = () => {
         <a className="btn btn-ghost normal-case text-xl">FavPicker</a>
       </div>
       <div className="navbar-end">
+        <form onSubmit={handleSubmit}>
+          <input
+            value={firstName}
+            onChange={(e) => setCityName(e.target.value)}
+            type="text"
+            placeholder="Type here a city name"
+            className="input input-bordered w-full max-w-xs"
+          />
+        </form>
+
         <label htmlFor="login-modal" className="btn btn-ghost btn-circle">
           {userIcon}
         </label>
