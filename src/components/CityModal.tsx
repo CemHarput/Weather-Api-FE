@@ -4,19 +4,11 @@ export const CityModal = () => {
   return (
     <>
       <input type="checkbox" id="city-modal" className="modal-toggle" />
-      <div className="modal modal-bottom  sm:modal-middle">
-        <div className="modal-box">
-          <div className="mb-9">
-            <label
-              htmlFor="city-modal"
-              className="btn btn-sm btn-circle absolute right-2 top-6"
-            >
-              X
-            </label>
-          </div>
-
-          <div className="overflow-x-auto">
-            <table className="table table-compact w-full">
+      <div className="modal modal-bottom sm:modal-middle">
+        <div className="modal-box max-w-full">
+          <h3 className="font-bold text-lg">Searched city</h3>
+          <div className="overflow-x-auto py-4">
+            <table className="table table-normal w-full">
               <thead>
                 <tr>
                   <th></th>
@@ -41,6 +33,12 @@ export const CityModal = () => {
               </tbody>
               <tfoot></tfoot>
             </table>
+          </div>
+
+          <div className="modal-action">
+            <label htmlFor="city-modal" className="btn">
+              Close
+            </label>
           </div>
         </div>
       </div>
