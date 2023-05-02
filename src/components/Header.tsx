@@ -13,7 +13,7 @@ export const Header = () => {
     <div className="navbar bg-base-100 drop-shadow-md hover:drop-shadow-xl">
       <div className="navbar-start"></div>
       <div className="navbar-center">
-        <a className="btn btn-ghost normal-case text-xl">FavPicker</a>
+        <a className="btn btn-ghost normal-case text-xl">WeatherApp</a>
       </div>
       <div className="navbar-end">
         <form>
