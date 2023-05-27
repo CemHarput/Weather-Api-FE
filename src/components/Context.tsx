@@ -1,9 +1,9 @@
 import React from "react";
 import { Footer } from "./Footer";
-import { Header } from "./Header";
-import { LoginModal } from "./LoginModal";
+import { Header } from "./Header/Header";
+import { LoginModal } from "./Header/LoginModal";
 import { Body } from "./Body";
-import { CityModal } from "./CityModal";
+import { CityModal } from "./Header/CityModal";
 
 export const Context = () => {
   return (
