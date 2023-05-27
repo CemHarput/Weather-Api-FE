@@ -12,12 +12,13 @@ export const CityModal = () => {
               <thead>
                 <tr>
                   <th></th>
-                  <th>Name</th>
-                  <th>Job</th>
-                  <th>company</th>
-                  <th>location</th>
-                  <th>Last Login</th>
-                  <th>Favorite Color</th>
+                  <th>Query Cost</th>
+                  <th>Latitude</th>
+                  <th>Longitude</th>
+                  <th>Resolved Address</th>
+                  <th>Address</th>
+                  <th>Timezone</th>
+                  <th>Tzoffset</th>
                 </tr>
               </thead>
               <tbody>

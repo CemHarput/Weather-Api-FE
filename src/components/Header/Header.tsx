@@ -4,11 +4,24 @@ import {
   faUser,
   faUserGroup,
 } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 
 const userIcon = <FontAwesomeIcon icon={faUser} size="lg" />;
 const searchIcon = <FontAwesomeIcon icon={faSearch} size="lg" />;
 
 export const Header = () => {
+  const [inputValue, setInputValue] = useState("");
+
+  const handleInputChange: React.ChangeEventHandler<HTMLInputElement> = (
+    event
+  ) => {
+    setInputValue(event.target.value);
+  };
+  const searchButtonClick: React.MouseEventHandler<HTMLLabelElement> = (
+    event
+  ) => {
+    console.log("Button clicked!", inputValue);
+  };
   return (
     <div className="navbar bg-base-100 drop-shadow-md hover:drop-shadow-xl">
       <div className="navbar-start"></div>
@@ -22,10 +35,16 @@ export const Header = () => {
             placeholder="Type here a city name"
             className="input input-bordered w-full max-w-xs"
             id="inputComponent"
+            value={inputValue}
+            onChange={handleInputChange}
           />
         </form>
 
-        <label htmlFor="city-modal" className="btn btn-ghost btn-circle">
+        <label
+          htmlFor="city-modal"
+          className="btn btn-ghost btn-circle"
+          onClick={searchButtonClick}
+        >
           {searchIcon}
         </label>
 

@@ -1,15 +1,5 @@
 import React, { useEffect, useState } from "react";
-
-interface City {
-  id: string;
-  queryCost: number;
-  latitude: string;
-  longitude: string;
-  resolvedAddress: string;
-  address: string;
-  timezone: string;
-  tzoffset: string;
-}
+import City from "../interfaces/City";
 
 export const WeatherTable = () => {
   const [cities, setCities] = useState<City[]>([]);
